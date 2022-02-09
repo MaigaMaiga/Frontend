@@ -1,34 +1,26 @@
 <ion-content  >
   
   
-<form action="" style="margin-top: 120%;margin-left: 20%;background-color: rgba(16, 97, 70, 0);">
+<form action="" style="margin-top: 120%;margin-left: 10%;background-color: rgba(16, 97, 70, 0);">
   <ion-list style="background-color: rgba(127, 255, 212, 0);">
-    <div style="margin: 4%;">
-      <ion-label style="font-size: 15px ; color: black;">Nom</ion-label>
-      <input name="" style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white; ">
-    </div>
-    <div style="margin: 4%;">
-      <ion-label style="font-size: 15px ; color: black; ">Prenom</ion-label>
-      <input name=""  style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white;">
-    </div>
+    
     <div style="margin: 4%;">
       <ion-label style="font-size: 15px ; color: black;">Email :</ion-label>
-      <input name=""  style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white;">
+      <input name="email" type="email" [(ngModel)]="email"  style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white;">
     </div>
     <div style="margin: 4%;">
-      <ion-label style="font-size: 15px ; color: black;">Identifiant :</ion-label>
-      <input name=""  style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white;">
+      <ion-label style="font-size: 15px ; color: black;">Mot de passe :</ion-label>
+      <input name="password" type="password" [(ngModel)]="password" style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white;">
     </div>
-    <div style="margin: 4%;">
-      <ion-label style="font-size: 15px ; color: black;">Mot de passe</ion-label>
-      <input name=""  style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white;">
+    
+    <div style="margin: 4%;"><br>
+  <ion-button  expand="block" (click)="login()" shape="round">Se connecter</ion-button><br>
+  <div style="margin: 4%; margin-right: 50%;">
+     <a href="password" type="" style="color: black; ">Mot de passe oublier</a>
     </div>
-    <div style="margin: 4%;">
-      <ion-label style="font-size: 15px ; color: black;">Mot pass oublié</ion-label>
-      <input name=""  style="width: 50%; float: right; border-radius: 50px; color: black; background-color: white;">
-    </div>
-    <div style="margin: 4%;">
-  <ion-button  expand="block" shape="round">S'inscrire</ion-button>
+  </div>
+  <div style="margin: 10%;">
+    <ion-button type="text" (click)="inscription()" shape="round">Creer un compte</ion-button>
   </div>
   </ion-list>
 </form>
